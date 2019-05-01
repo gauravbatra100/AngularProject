@@ -1,0 +1,48 @@
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> DATE </th>
+      <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="campaign">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> CAMPAIGN </th>
+      <td mat-cell *matCellDef="let element">
+          <img [src]="element.icon" />  {{element.campaign}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="imageUrl">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> VIEW </th>
+      <td mat-cell *matCellDef="let element"><img [src]="element.imageUrl" /> </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> ACTIONS </th>
+
+      <td mat-cell *matCellDef="let row; let i=index;">
+        <button mat-icon-button color="primary">
+          <mat-icon aria-label="CSV" svgIcon="baseline-note_add-24px"></mat-icon>
+        </button>
+        <button mat-icon-button color="primary">
+          <mat-icon aria-label="Report" svgIcon="baseline-signal_cellular_alt-24px"></mat-icon>
+        </button>
+        <button mat-icon-button color="primary" (click)="picker.open()" >
+            <mat-icon aria-label="Schedule" svgIcon="baseline-calendar_today-24px"></mat-icon>
+          </button>
+
+        <mat-form-field class="visible">
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+
+      </td>
+
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+
+

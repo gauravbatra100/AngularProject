@@ -1,0 +1,44 @@
+.header {
+  text-align: center;
+    font-size: x-large;
+    color: darkblue;
+    margin: 3%;
+}
+
+
+.parentTable {
+  width: 75%;
+  margin-left: 13%;
+}
+
+.mat-tab-link-active,.mat-tab-label.mat-tab-label-active  {
+  background-color: transparent;
+  color: rgb(155, 221, 31);
+}
+
+.mat-tab-label {
+  height: 48px;
+  font-weight: bold;
+  color: white;
+  padding: 0 24px;
+  cursor: pointer;
+  box-sizing: border-box;
+  opacity: .6;
+  min-width: 160px;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  position: relative;
+  background-color: rgb(155, 221, 31);
+}
+
+.mat-tab-label-container {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden;
+  z-index: 1;
+  margin-bottom: 3%;
+}
+

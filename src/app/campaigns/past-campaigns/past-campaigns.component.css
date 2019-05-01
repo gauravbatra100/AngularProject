@@ -1,0 +1,46 @@
+table {
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+th.mat-header-cell {
+  background-color: rgba(241, 236, 236, 0.945);
+}
+
+img {
+  width: 30px;
+  height: 30px;
+}
+
+.mat-column-date{
+  min-height: 48px;
+  padding: 1%
+
+}
+.mat-column-campaign{
+  border-left: 1px solid grey;
+  padding: 1%;
+   min-height: 48px;
+}
+.mat-column-imageUrl{
+ border-left: 1px solid grey;
+   min-height: 48px;
+   padding: 1%
+}
+.mat-column-actions{
+  border-left: 1px solid grey;
+  min-height: 48px;
+  padding: 1%
+ }
+
+ table.mat-table {
+  border-spacing: 0;
+  border: 1px solid gray;
+}
+
+.visible {
+  visibility: hidden;
+}
